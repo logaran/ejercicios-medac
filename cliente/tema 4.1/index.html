@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4.1</title>
+</head>
+
+<body>
+    <div id="iteraciones">
+        <script>
+            for (let i = 0; i <= 20; i++) {
+                // Lo hacemos con un terciario.
+                // console.log(i%2===0? 'El numero ' + i + ' es PAR' :'El numero ' + i + ' es IMPAR');
+
+                // Lo hacemos con if..else
+                /*if ( i%2 === 0) {
+                    console.log('El número ' + i + ' es PAR');
+                } else {
+                    console.log('El número ' + i + ' es IMPAR');
+                }*/
+                // Lo hacemos en plan chulo
+                console.log(`El número ${i} es ${i % 2 === 0 ? "PAR" : "IMPAR"}`)
+            }
+        </script>
+    </div>
+</body>
+
+</html>
