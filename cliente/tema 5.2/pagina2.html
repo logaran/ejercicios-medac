@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Destino</title>
+</head>
+<body>
+    <script>
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        const pagina = document.body;
+        console.log(pagina);
+        pagina.innerHTML = `<h1>${params.get('mensajeDestino')}</h1>`;
+    </script>
+    
+</body>
+</html>
