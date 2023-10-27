@@ -1,5 +1,4 @@
 <?php
-    session_start();
     $titulo = "Generador de sesiones";
 ?>
 <!DOCTYPE html>
