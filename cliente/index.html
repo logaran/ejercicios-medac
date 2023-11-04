@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando objetos en JS</title>
+</head>
+
+<body>
+    <h1>Creando objetos en JS</h1>
+    <p id="parrafo">
+        <script>
+            function alumno(nombre, apellidos, edad, ciudad) {
+                this.nombre = nombre;
+                this.apellidos = apellidos;
+                this.edad = edad;
+                this.ciudad = ciudad;
+            }
+
+            alumno.prototype.info = function () {
+                return "Mi nombre es " + this.nombre + " " + this.apellidos + ", tengo " + this.edad + " años y soy de " + this.ciudad
+            };
+
+            let alumnos = [
+                new alumno("Paco", "Perez", 16, "Málaga"),
+                new alumno("Luis", "López", 15, "Sevilla"),
+                new alumno("Candida", "Comares", 19, "Cádiz"),
+                new alumno("Ernesto", "Romanones", 7, "Sigüenza")
+            ];
+
+            let parrafo = document.getElementById("parrafo");
+            let lista = document.createElement("ul");
+            for (alumno of alumnos) {
+                let li = document.createElement("li");
+                li.innerText = alumno.info();
+                console.log(li);
+                lista.appendChild(li);
+            }
+            parrafo.appendChild(lista);
+        </script>
+    </p>
+
+</body>
+
+</html>
