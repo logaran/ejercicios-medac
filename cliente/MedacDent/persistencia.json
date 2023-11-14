@@ -1,0 +1,17 @@
+{
+    "citas": [
+        {"idCita": "0", "fecha": "2023-11-14T10:30:00.000Z","idPaciente": "1"},
+        {"idCita": "1", "fecha": "2024-05-14T11:00:00.000Z","idPaciente": "0"},
+        {"idCita": "2", "fecha": "2024-02-14T09:30:00.000Z","idPaciente": "0"},
+        {"idCita": "3", "fecha": "2024-01-14T17:00:00.000Z","idPaciente": "1"},
+        {"idCita": "4", "fecha": "2026-07-14T19:30:00.000Z","idPaciente": "0"},
+        {"idCita": "5", "fecha": "2023-12-22T19:30:00.000Z","idPaciente": "1"}
+
+    ],
+    "pacientes": [
+        {"idPaciente": "0", "nombre" : "Freddy", "apellidos": "Hardest", "fechaNacimiento": "1987-05-14T10:30:00.000Z", "tlf": "555-264254", "email": "freddy.hardest@dinamic.es", "observaciones": "Blanqueamiento dental cada 6 meses"},
+        {"idPaciente": "1","nombre" : "Rick", "apellidos": "Dangerous", "fechaNacimiento": "1989-11-14T10:30:00.000Z", "tlf": "555-232521", "email": "rick.dangerous@core.uk", "observaciones": "Le gusta correr delante de bolas de piedra"}
+    ],
+    "indiceCita" : "6",
+    "indicePaciente" : "2"
+}
