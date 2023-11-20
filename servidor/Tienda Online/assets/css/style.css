@@ -1,0 +1,63 @@
+/* GENERALES */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(../img/black-ink-splatters-2.jpg);
+
+}
+
+a, a:visited {
+    color: rgb(70, 70, 70);
+}
+
+a:hover {
+    color: rgb(155, 30, 30);
+}
+/* CONTAINER */
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgb(155, 30, 30);
+    background-color: rgba(255,255,255,0.6);
+}
+/* HEADER */
+
+#header {
+    height: 145px;
+    margin: 0 auto;
+    background: #f0f0f0;
+
+}
+
+.product img {
+    width: 300px;
+}
+
+.logo img {
+    float:left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.logo a {
+    float: left;
+    font-size: 45px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', Helvetica, Arial;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 45px 0 0 25px;
+    text-shadow: 0 2px 1px #222;
+    color: rgb(155, 30, 30);
+    transition: all 300ms;
+}
+
+.logo a:hover {
+    text-shadow: 0 2px 1px #222, 0 0 6px rgb(155, 60, 60);
+}
