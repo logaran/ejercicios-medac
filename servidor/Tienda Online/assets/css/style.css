@@ -3,6 +3,8 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: sans-serif, Helvetica, Arial;
+    box-sizing: border-box;
 }
 
 body {
@@ -60,4 +62,213 @@ a:hover {
 
 .logo a:hover {
     text-shadow: 0 2px 1px #222, 0 0 6px rgb(155, 60, 60);
+}
+
+
+/* MENU */
+
+#menu {
+    background: #222;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid rgb(155, 60, 60);
+}
+
+
+#menu ul {
+    list-style: none;
+    margin: 0 auto;
+    margin-left: 25px;;
+}
+
+#menu ul li {
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+#menu a {
+    display: block;
+    color:white;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: background 300ms;
+}
+
+#menu a:first-child{
+    border-left: 1px solid #363636;
+}
+
+#menu a:hover {
+    background-color: rgb(155, 60, 60);
+}
+
+/* BARRA LATERAL */
+
+#lateral {
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+
+#lateral .block_aside {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+#lateral h3 {
+    display: block;
+    color: rgb(155, 60, 60);
+    width: 100%;
+    text-align: center;
+    padding: 2px 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #e1e1e1;
+    border-bottom: 2px solid rgb(155, 30, 30);
+}
+
+
+#lateral ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#lateral ul li {
+    list-style: square;
+    margin: 5px 0;
+    margin-left: 20px;
+    color: rgb(155, 30, 30);
+}
+
+#lateral ul li a {
+    text-decoration: none;
+}
+
+/* FORMS */
+
+label,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    display: block;
+    width: 95%;
+    margin-top: 2p;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+    border: 1px solid #c9c9c9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus
+{
+    border: 1px solid rgb(155, 30, 30);
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+.button
+{
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px 10px;
+    color: white;
+    background: rgb(155, 60, 60);
+    border: 1px solid rgb(155, 30, 30);
+    cursor: pointer;
+}
+
+label,
+input[type="button"],
+input[type="submit"] {
+    display: block;
+    margin-top: 10px;
+}
+
+/* CONTENT */
+#content {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* CENTRAL */
+
+#central {
+    padding: 15px;
+    width: 75%;
+    float: right;
+    border-left: 1px solid rgb(155, 30, 30);
+    box-shadow: -5px -1px 5px #ddd;
+}
+
+#central h1 {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+/* PRODUCTOS */
+.product {
+    width: 30%;
+    float: left;
+    min-height: 500px;
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+}
+
+.product img {
+    display: block;
+    overflow: hidden;
+    width: auto;
+    height: 180px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 18px;
+}
+
+.button {
+    color: white !important;
+    text-decoration: none;
+    background: rgb(155, 60, 60);
+    border-radius: 2px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+#footer {
+    text-align: center;
+    padding: 10px 0;
+    color:white;
+    background: #222;
+    clear: both;
+    border-top: 4px solid rgb(155, 30, 30);
 }

@@ -1,3 +1,5 @@
+<!-- http://localhost/ejercicios-medac/servidor/Tienda%20Online/ -->
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,7 +23,7 @@
         </header>
 
         <!-- MENU -->
-        <nav>
+        <nav id="menu">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="">Categoría 1</a></li>
@@ -34,7 +36,8 @@
         <div id="content">
             <!-- ASIDE -->
             <aside id="lateral">
-                <div class="login" class="block_aside">
+                <div class="login block_aside">
+                    <h3>Acceder</h3>
                     <form action="#" method="post">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email">
@@ -42,32 +45,35 @@
                         <input type="password" name="password" id="password">
                         <input type="submit" value="Enviar">
                     </form>
-                    <a href="#">Mis pedidos</a>
-                    <a href="#">Gestionar pedidos</a>
-                    <a href="#">Gestionar categorías</a>
+                    <ul>
+                        <li><a href="#">Mis pedidos</a></li>
+                        <li><a href="#">Gestionar pedidos</a></li>
+                        <li><a href="#">Gestionar categorías</a></li>
+                    </ul>
 
                 </div>
             </aside>
 
             <!-- MAIN -->
             <main id="central">
+                <h1>Productos destacados</h1>
                 <div class="product">
                     <img src="./assets/img/quinqui3.jpg" alt="Camiseta Quinqui modelo 3">
-                    <h2>Camiseta Quinqui, modelo cruz de navajas</h2>
+                    <h2>Cruz de navajas</h2>
                     <p>30 euros</p>
-                    <a href="">Comprar</a>
+                    <a href="" class="button">Comprar</a>
                 </div>
                 <div class="product">
                     <img src="./assets/img/quinqui4.jpg" alt="Camiseta Quinqui modelo 3">
-                    <h2>Camiseta Quinqui, modelo marginal</h2>
+                    <h2>Marginal</h2>
                     <p>30 euros</p>
-                    <a href="">Comprar</a>
+                    <a href="" class="button">Comprar</a>
                 </div>
                 <div class="product">
                     <img src="./assets/img/quinqui6.jpg" alt="Camiseta Quinqui modelo 3">
-                    <h2>Camiseta Quinqui, modelo sound</h2>
+                    <h2>Sound</h2>
                     <p>30 euros</p>
-                    <a href="">Comprar</a>
+                    <a href="" class="button">Comprar</a>
                 </div>
             </main>
 
