@@ -106,7 +106,7 @@ a:hover {
 
 #lateral {
     width: 22%;
-    min-height: 500px;
+    min-height: 70vh;
     float: left;
     margin-top: 20px;
     margin-left: 10px;
@@ -159,7 +159,7 @@ input[type="email"],
 select {
     display: block;
     width: 95%;
-    margin-top: 2p;
+    margin-top: 2px;
     margin-bottom: 5px;
 }
 
