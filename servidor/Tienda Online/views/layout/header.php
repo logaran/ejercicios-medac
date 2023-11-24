@@ -23,7 +23,7 @@
         <!-- MENU -->
         <nav id="menu">
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="<?=base_url?>">Inicio</a></li>
                 <li><a href="">Categoría 1</a></li>
                 <li><a href="">Categoría 2</a></li>
                 <li><a href="">Categoría 3</a></li>

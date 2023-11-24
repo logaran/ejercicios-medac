@@ -262,6 +262,12 @@ input[type="submit"] {
     margin: auto;
 }
 
+.button-small {
+    width: 20%;
+    text-align: center;
+    margin: 1em 0;
+}
+
 /* FOOTER */
 
 #footer {
@@ -271,4 +277,36 @@ input[type="submit"] {
     background: #222;
     clear: both;
     border-top: 4px solid rgb(155, 30, 30);
+}
+
+.alert_success {
+    color: green;
+}
+
+.alert_fail {
+    color: red;
+}
+
+/* TABLAS */
+
+table {
+    border: 1px solid #CCC;
+    width: 100%;
+    text-align: center;
+}
+
+td {
+  padding: 0.2em;
+  border: none;
+}
+
+th {
+    padding: 0.3em;
+    font-size: large;
+    color: #ccc;
+    background-color: rgb(155, 60, 60);
+}
+
+tr:hover {
+    background-color: #ccc;
 }
