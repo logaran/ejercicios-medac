@@ -11,18 +11,19 @@
                     <input type="password" name="password" id="password">
                     <input type="submit" value="Enviar">
                 </form>
+                <a id="link_registro" href="<?=base_url?>usuarios/registro">Regístrate</a>
             <?php else : ?>
                 <h3><?= $_SESSION['identity']->nombre . ' ' . $_SESSION['identity']->apellidos ?></h3>
             <?php endif; ?>
             <ul>
                 <?php if (isset($_SESSION['admin'])) : ?>
                     <li><a href="<?=base_url?>/categorias/index">Gestionar categorías</a></li>
-                    <li><a href="<?=base_url?>/productos/index"">Gestionar productos</a></li>
-                    <li><a href="<?=base_url?>/pedidos/index"">Gestionar pedidos</a></li>
+                    <li><a href="<?=base_url?>/productos/gestion">Gestionar productos</a></li>
+                    <li><a href="<?=base_url?>/pedidos/index">Gestionar pedidos</a></li>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['identity'])) : ?>
                     <li><a href="#">Mis pedidos</a></li>
-                    <li><a href="<?= base_url ?>/usuarios/logout">Cerrar sesión</a></li>
+                    <li><a href="<?= base_url ?>usuarios/logout">Cerrar sesión</a></li>
                 <?php endif; ?>
 
             </ul>

@@ -1,5 +1,5 @@
 <h1>Gestionar categorías</h1>
-<a href="<?=base_url?>" class="button button-small">Añadir Categoría</a>
+<a href="<?=base_url?>/categorias/crear" class="button button-small">Crear Categoría</a>
 <table border="1">
     <tr>
         <th>Id</th>

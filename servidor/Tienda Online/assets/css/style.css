@@ -12,21 +12,24 @@ body {
 
 }
 
-a, a:visited {
+a,
+a:visited {
     color: rgb(70, 70, 70);
 }
 
 a:hover {
     color: rgb(155, 30, 30);
 }
+
 /* CONTAINER */
 
 #container {
     width: 80%;
     margin: 0 auto;
     box-shadow: 0px 0px 10px rgb(155, 30, 30);
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
+
 /* HEADER */
 
 #header {
@@ -41,7 +44,7 @@ a:hover {
 }
 
 .logo img {
-    float:left;
+    float: left;
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -78,7 +81,8 @@ a:hover {
 #menu ul {
     list-style: none;
     margin: 0 auto;
-    margin-left: 25px;;
+    margin-left: 25px;
+    ;
 }
 
 #menu ul li {
@@ -86,15 +90,16 @@ a:hover {
     float: left;
     border-right: 1px solid #363636;
 }
+
 #menu a {
     display: block;
-    color:white;
+    color: white;
     text-decoration: none;
     padding: 0 15px;
     transition: background 300ms;
 }
 
-#menu a:first-child{
+#menu a:first-child {
     border-left: 1px solid #363636;
 }
 
@@ -110,7 +115,7 @@ a:hover {
     float: left;
     margin-top: 20px;
     margin-left: 10px;
-    
+
 }
 
 #lateral .block_aside {
@@ -152,6 +157,12 @@ a:hover {
 
 /* FORMS */
 
+form {
+    width: 95%;
+    margin: auto;
+}
+
+textarea,
 label,
 input[type="text"],
 input[type="password"],
@@ -177,16 +188,14 @@ select {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="email"]:focus
-{
+input[type="email"]:focus {
     border: 1px solid rgb(155, 30, 30);
     color: black;
 }
 
 input[type="button"],
 input[type="submit"],
-.button
-{
+.button {
     display: block;
     border-radius: 2px;
     width: auto;
@@ -202,6 +211,24 @@ input[type="button"],
 input[type="submit"] {
     display: block;
     margin-top: 10px;
+}
+
+#link_registro {
+    display: inline-block;
+    padding-top: 1em;
+    font-size: smaller;
+    width: 100%;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+
+}
+
+input:invalid {
+    border: 1px solid rgb(155, 60, 60) !important;
+    box-shadow: 0 0 3px rgb(155, 30, 30) !important;
 }
 
 /* CONTENT */
@@ -273,7 +300,7 @@ input[type="submit"] {
 #footer {
     text-align: center;
     padding: 10px 0;
-    color:white;
+    color: white;
     background: #222;
     clear: both;
     border-top: 4px solid rgb(155, 30, 30);
@@ -296,8 +323,8 @@ table {
 }
 
 td {
-  padding: 0.2em;
-  border: none;
+    padding: 0.2em;
+    border: none;
 }
 
 th {
