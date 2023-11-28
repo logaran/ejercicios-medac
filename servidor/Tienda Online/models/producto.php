@@ -14,6 +14,13 @@ class Producto
 
     private $db;
 
+    /**
+     * Get the value of id
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
     public function __construct()
     {
         $this->db = Database::connect();
@@ -81,7 +88,7 @@ class Producto
 
     /**
      * Get the value of precio
-     */ 
+     */
     public function getPrecio()
     {
         return $this->precio;
@@ -91,7 +98,7 @@ class Producto
      * Set the value of precio
      *
      * @return  self
-     */ 
+     */
     public function setPrecio($precio)
     {
         $this->precio = $this->db->real_escape_string($precio);
@@ -101,7 +108,7 @@ class Producto
 
     /**
      * Get the value of stock
-     */ 
+     */
     public function getStock()
     {
         return $this->stock;
@@ -111,7 +118,7 @@ class Producto
      * Set the value of stock
      *
      * @return  self
-     */ 
+     */
     public function setStock($stock)
     {
         $this->stock = $this->db->real_escape_string($stock);
@@ -121,7 +128,7 @@ class Producto
 
     /**
      * Get the value of oferta
-     */ 
+     */
     public function getOferta()
     {
         return $this->oferta;
@@ -131,7 +138,7 @@ class Producto
      * Set the value of oferta
      *
      * @return  self
-     */ 
+     */
     public function setOferta($oferta)
     {
         $this->oferta = $this->db->real_escape_string($oferta);
@@ -141,7 +148,7 @@ class Producto
 
     /**
      * Get the value of fecha
-     */ 
+     */
     public function getFecha()
     {
         return $this->fecha;
@@ -151,7 +158,7 @@ class Producto
      * Set the value of fecha
      *
      * @return  self
-     */ 
+     */
     public function setFecha($fecha)
     {
         $this->fecha = $fecha;
@@ -161,7 +168,7 @@ class Producto
 
     /**
      * Get the value of imagen
-     */ 
+     */
     public function getImagen()
     {
         return $this->imagen;
@@ -171,7 +178,7 @@ class Producto
      * Set the value of imagen
      *
      * @return  self
-     */ 
+     */
     public function setImagen($imagen)
     {
         $this->imagen = $imagen;
@@ -179,13 +186,21 @@ class Producto
         return $this;
     }
 
-    public function getAll(){
+    public function getAll()
+    {
         $productos = $this->db->query("SELECT * FROM productos ORDER BY id DESC");
         return $productos;
     }
 
-    public function save(){
-        $sql = "INSERT INTO productos VALUES (NULL, '{$this->getCategoria_id()}','{$this->getNombre()}', '{$this->getDescripcion()}', '{$this->getPrecio()}', '{$this->getStock()}', null, CURDATE(), null)";
+    public function getOne()
+    {
+        $producto = $this->db->query("SELECT * FROM productos WHERE id = {$this->getId()}");
+        return $producto->fetch_object();
+    }
+
+    public function save()
+    {
+        $sql = "INSERT INTO productos VALUES (NULL, '{$this->getCategoria_id()}','{$this->getNombre()}', '{$this->getDescripcion()}', '{$this->getPrecio()}', '{$this->getStock()}', null, CURDATE(), '{$this->getImagen()}')";
 
         try {
             $save = $this->db->query($sql);
@@ -196,4 +211,44 @@ class Producto
         return $save;
     }
 
+    public function edit()
+    {
+        $sql = "UPDATE productos SET nombre = '{$this->getNombre()}', descripcion = '{$this->getDescripcion()}', precio = '{$this->getPrecio()}', stock = '{$this->getStock()}'";
+        if ($this->getImagen() != null) {
+            $sql .= ", imagen = '{$this->getImagen()}'";
+        }
+        $sql .= "WHERE id = {$this->getId()};";
+
+        try {
+            $save = $this->db->query($sql);
+        } catch (Exception $e) {
+            $save = false;
+            throw new Exception($e->getMessage());
+        }
+        return $save;
+    }
+
+    public function delete($id)
+    {
+        $sql = "DELETE FROM productos WHERE id={$id}";
+        try {
+            $delete = $this->db->query($sql);
+        } catch (Exception $e) {
+            $delete = false;
+            throw new Exception($e->getMessage());
+        }
+        return $delete;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 }

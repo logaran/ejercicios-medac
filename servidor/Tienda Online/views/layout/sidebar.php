@@ -4,7 +4,7 @@
         <div class="login block_aside">
             <?php if (!isset($_SESSION['identity'])) : ?>
                 <h3>Acceder</h3>
-                <form action="<?= base_url ?>/usuarios/login" method="post">
+                <form action="<?= base_url ?>usuarios/login" method="post">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
                     <label for="password">Contraseña</label>
@@ -17,9 +17,9 @@
             <?php endif; ?>
             <ul>
                 <?php if (isset($_SESSION['admin'])) : ?>
-                    <li><a href="<?=base_url?>/categorias/index">Gestionar categorías</a></li>
-                    <li><a href="<?=base_url?>/productos/gestion">Gestionar productos</a></li>
-                    <li><a href="<?=base_url?>/pedidos/index">Gestionar pedidos</a></li>
+                    <li><a href="<?=base_url?>categorias/index">Gestionar categorías</a></li>
+                    <li><a href="<?=base_url?>productos/gestion">Gestionar productos</a></li>
+                    <li><a href="<?=base_url?>pedidos/index">Gestionar pedidos</a></li>
                 <?php endif; ?>
                 <?php if (isset($_SESSION['identity'])) : ?>
                     <li><a href="#">Mis pedidos</a></li>

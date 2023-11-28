@@ -289,6 +289,19 @@ input:invalid {
     margin: auto;
 }
 
+.button-gestion {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 70%;
+    font-size: smaller;
+}
+
+.button-edit {
+    background-color: green;
+    border-color: green;
+}
+
+
 .button-small {
     width: 20%;
     text-align: center;
