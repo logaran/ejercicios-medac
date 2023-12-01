@@ -15,6 +15,21 @@ class Utils{
         $categoria = new Categoria();
         $categorias = $categoria->getAll();
         return $categorias;
+    }    
+
+    public static function statsCarrito(){  
+        $stats = array(
+            'count' => 0,
+            'total'=> 0,
+        );
+
+        if (isset($_SESSION["carrito"])) {
+            $stats["count"] = count($_SESSION["carrito"]);
+
+            foreach ($_SESSION["carrito"] as $index => $producto) {
+                $stats["total"] += $producto["precio"] * $producto["unidades"];
+            }
+        }
+        return $stats;
     }
-    
 }

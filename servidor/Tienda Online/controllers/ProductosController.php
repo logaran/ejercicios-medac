@@ -4,6 +4,9 @@ class productosController
 {
     public function index()
     {
+        $producto = new Producto();
+        $productos = $producto->getRandom(6);
+        
         require_once("./views/productos/destacados.php");
     }
     public function gestion()
@@ -110,5 +113,18 @@ class productosController
             $_SESSION['delete'] = 'failed';
         }
         header('Location: ' . base_url . 'productos/gestion');
+    }
+
+    public function ver() {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+
+            $producto = new Producto();
+            $producto->setId($id);
+
+            $prod = $producto->getOne();
+        } 
+
+        require_once('./views/productos/ver.php');
     }
 }

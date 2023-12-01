@@ -1,6 +1,17 @@
 <div id="content">
     <!-- ASIDE -->
     <aside id="lateral">
+        <div class="block_aside">
+            <h3>Carrito</h3>
+            <ul><a href="<?=base_url?>carrito/index">
+                <?php $stats = Utils::statsCarrito(); ?>
+                <li>Productos: <?=$stats['count']?></li>
+                <li>Total: <?=$stats['total']?> €</li>
+                </a>
+                <li><a href="<?=base_url?>carrito/delete_all">Vaciar Carrito</a></li>
+            </ul>
+
+        </div>
         <div class="login block_aside">
             <?php if (!isset($_SESSION['identity'])) : ?>
                 <h3>Acceder</h3>

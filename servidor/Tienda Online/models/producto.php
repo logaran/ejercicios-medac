@@ -17,13 +17,14 @@ class Producto
     /**
      * Get the value of id
      */
-    public function getId()
-    {
-        return $this->id;
-    }
     public function __construct()
     {
         $this->db = Database::connect();
+    }
+    
+    public function getId()
+    {
+        return $this->id;
     }
 
     /**
@@ -200,7 +201,8 @@ class Producto
 
     public function save()
     {
-        $sql = "INSERT INTO productos VALUES (NULL, '{$this->getCategoria_id()}','{$this->getNombre()}', '{$this->getDescripcion()}', '{$this->getPrecio()}', '{$this->getStock()}', null, CURDATE(), '{$this->getImagen()}')";
+        $imagen = $this->getImagen() != "" ? $this->getImagen() : null;
+        $sql = "INSERT INTO productos VALUES (NULL, '{$this->getCategoria_id()}','{$this->getNombre()}', '{$this->getDescripcion()}', '{$this->getPrecio()}', '{$this->getStock()}', null, CURDATE(), '{$imagen}')";
 
         try {
             $save = $this->db->query($sql);
@@ -250,5 +252,19 @@ class Producto
         $this->id = $id;
 
         return $this;
+    }
+
+    public function getRandom($limit){
+        $productos = $this->db->query("SELECT * FROM productos ORDER BY RAND() LIMIT $limit");
+        return $productos;
+    }
+
+    public function getAllCategory()
+    {
+        $sql = "SELECT p.*, c.nombre AS cat_nombre FROM productos p "
+                . "INNER JOIN categorias c ON c.id = p.categoria_id "
+                . "WHERE p.categoria_id = {$this->getCategoria_id()} " ;
+        $productos = $this->db->query($sql);
+        return $productos;
     }
 }
