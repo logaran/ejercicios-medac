@@ -265,7 +265,7 @@ input:invalid {
     margin: 10px;
     text-align: center;
     padding: 5px;
-    min-height: 300px;
+    min-height: 320px;
 }
 
 .product-preview {
@@ -311,7 +311,8 @@ input:invalid {
     text-decoration: none;
     background: rgb(155, 60, 60);
     border-radius: 2px;
-    margin: auto;
+    margin: 10px;
+    text-align: center;
 }
 
 .button-gestion {
@@ -331,6 +332,10 @@ input:invalid {
     width: 20%;
     text-align: center;
     margin: 1em 0;
+}
+
+.total-carrito {
+    float: right;
 }
 
 /* FOOTER */
@@ -374,4 +379,8 @@ th {
 
 tr:hover {
     background-color: #ccc;
+}
+
+#lista-confirmados {
+    margin-left: 2em;
 }

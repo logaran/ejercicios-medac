@@ -4,7 +4,15 @@ class Utils{
 
     public static function isAdmin(){
         if (!isset($_SESSION["admin"])) {
-            header("Location: base".base_url);
+            header("Location: " . base_url);
+        } else {
+            return true;
+        }
+    }
+
+    public static function isLoged(){
+        if (!isset($_SESSION["identity"])) {
+            header("Location: " . base_url);
         } else {
             return true;
         }
@@ -31,5 +39,15 @@ class Utils{
             }
         }
         return $stats;
+    }
+
+    public static function showEstado($estado){
+        $estados = array(
+            "confirmado"=> "Confirmado",
+            "preparation"=> "En preparación",
+            "ready"=> "Listo para enviar",
+            "sended"=> "Enviado",
+        ) ;
+        return $estados[$estado];
     }
 }

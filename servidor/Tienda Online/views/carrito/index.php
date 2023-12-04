@@ -16,7 +16,18 @@
                 <td><a href="<?= base_url ?>productos/ver&id=<?= $producto['id_producto'] ?>"><?= $producto['producto']->nombre ?></a></td>
                 <td><?= $producto['precio'] ?></td>
                 <td><?= $producto['unidades'] ?></td>
+                <td><a href="<?=base_url?>carrito/remove&index=<?=$indice?>">X</a></td>
+                
             </tr>
         <?php endforeach; ?>
-    <?php endif; ?>
     </table>
+
+    <br />
+
+    <div class="total-carrito">
+        <?php $stats = Utils::statsCarrito(); ?>
+        <h3>Precio Total: <?= $stats['total'] ?>€</h3>
+        <a href="<?= base_url ?>pedidos/hacer" class="button button-edit">Hacer pedido</a>
+        <a href="<?= base_url ?>carrito/delete_all" class="button">Vaciar Carrito</a>
+    </div>
+<?php endif; ?>
