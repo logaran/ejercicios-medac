@@ -335,7 +335,9 @@ input:invalid {
 }
 
 .total-carrito {
+    text-align: center;
     float: right;
+    width: 35%;
 }
 
 /* FOOTER */
@@ -383,4 +385,26 @@ tr:hover {
 
 #lista-confirmados {
     margin-left: 2em;
+}
+
+.plus, .minus {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 25px;
+    font-weight: 600;
+    color: white;
+}
+
+.plus {
+    background-color: green;
+}
+
+.minus {
+    background-color: rgb(155, 30, 30);
+}
+
+.plus:visited, .minus:visited {
+    color: white;
 }

@@ -15,7 +15,11 @@
                 <td><img src="<?= $imgCamiseta ?>" width="70px" /></td>
                 <td><a href="<?= base_url ?>productos/ver&id=<?= $producto['id_producto'] ?>"><?= $producto['producto']->nombre ?></a></td>
                 <td><?= $producto['precio'] ?></td>
-                <td><?= $producto['unidades'] ?></td>
+                <td>
+                    <a class="plus" href="<?=base_url?>carrito/down&index=<?=$indice?>">-</a>
+                    <?= $producto['unidades'] ?>
+                    <a class="minus" href="<?=base_url?>carrito/up&index=<?=$indice?>">+</a>
+                </td>
                 <td><a href="<?=base_url?>carrito/remove&index=<?=$indice?>">X</a></td>
                 
             </tr>
